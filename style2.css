@@ -1,0 +1,127 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and font */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding: 1rem;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #4a90e2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Navigation - Flexbox */
+.nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #357abd;
+  padding: 0.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.nav a:hover {
+  background: #285a8e;
+  border-radius: 4px;
+}
+
+/* Main layout - CSS Grid */
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Content section */
+.content {
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Cards - Flexbox */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #e1eaff;
+  padding: 1rem;
+  flex: 1 1 150px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .nav ul {
+    justify-content: space-around;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav a {
+    padding: 0.7rem;
+  }
+}
